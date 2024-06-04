@@ -630,6 +630,7 @@ font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
+
 }
 
 .articles-mobile{
@@ -745,6 +746,8 @@ font-weight: 400;
 .footer-link a:hover .footer-link-open{
     display: none;
 }
+
+
 
 
 @media (max-width:1625px) {

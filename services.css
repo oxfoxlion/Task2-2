@@ -1,0 +1,342 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*寬高固定*/
+*,*:before,*:after{
+    box-sizing:border-box;
+    }
+    
+/*圖片自適應*/
+img{
+    max-width:100%; /*設定為父元素的寬度*/
+    height:auto;
+    }
+
+/* 從這裡開始寫 */
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.wrap{
+    max-width:1920px;
+    margin:0 auto;
+}
+
+/* 表頭 */
+.header{
+    /*for Menu*/
+    display:flex;
+    justify-content:space-between; /*橫向置中*/
+    align-items: center;/*垂直置中*/
+    padding: 0 40px;
+}
+
+.logo{
+    width:90px;
+    height:40px;
+    padding:7px 12px;
+}
+
+.menu{
+    margin-top:32px;
+    margin-bottom:32px;
+    display:flex;
+    gap:40px;
+}
+
+
+.menu-text{
+    /*讓a標籤範圍擴大*/
+    display:block; 
+    
+    /* 字體設定 */
+    padding:4px 8px;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    
+    /*for span標籤*/
+    position:relative;
+}
+
+.border-corner{
+    opacity: 0;
+}
+
+/*重複設定四次，記得更改上下左右*/
+.border-corner-left-top{
+    /*設定邊框樣式*/
+    border-left:1px solid #919191;
+    border-top:1px solid #919191;
+    /*設定寬高*/
+    width:8px;
+    height:8px;
+    /*絕對定位*/
+    position:absolute;
+    left:0px;
+    top:0px;
+    }
+
+.border-corner-right-top{
+    /*設定邊框樣式*/
+    border-right:1px solid #919191;
+    border-top:1px solid #919191;
+    /*設定寬高*/
+    width:8px;
+    height:8px;
+    /*絕對定位*/
+    position:absolute;
+    right:0px;
+    top:0px;
+    }
+
+ .border-corner-left-bottom{
+    /*設定邊框樣式*/
+    border-left:1px solid #919191;
+    border-bottom:1px solid #919191;
+    /*設定寬高*/
+    width:8px;
+    height:8px;
+    /*絕對定位*/
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    }
+    
+.border-corner-right-bottom{
+    /*設定邊框樣式*/
+    border-right:1px solid #919191;
+    border-bottom:1px solid #919191;
+    /*設定寬高*/
+    width:8px;
+    height:8px;
+    /*絕對定位*/
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    }
+
+.menu-content:hover .border-corner {
+    opacity: 1;
+}
+
+.menu-button{
+    border: none;
+    background-color:#FFFFFF;
+    margin: 8px;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+/* 作品集頁面從這裡開始 */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 作品集頁面在這裡結束 */
+/* footer */
+.footer{
+    background-image: url(./images/footer-bg-lg.png);
+    display: flex;
+    padding: 80px;
+    justify-content: center;
+}
+
+.footer-box{
+    width: 1296px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content img{
+    width: 120px;
+    height: 54px;
+    margin-bottom: 24px;
+}
+
+.wellcome{
+    color:#3B3B3B ;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 24px;
+}
+
+.email{
+    color: #919191;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.footer-link a{
+    width: 306px;
+    background-color: #FFFFFF;
+    border: 1px solid #C1C1C1;
+    color: #3B3B3B;
+    padding:8px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    gap:8px
+}
+
+
+.footer-link-open{
+    width: 56px;
+    height: 56px;
+}
+
+.footer-link .footer-link-hover{
+    display: none;
+    width: 56px;
+    height: 56px;
+}
+
+.footer-link a:hover{
+    background-color: #000000;
+    border:1 solid #000000;
+    color: #FFFFFF;
+}
+
+.footer-link a:hover .footer-link-hover{
+    display: inline;
+}
+
+.footer-link a:hover .footer-link-open{
+    display: none;
+}
+
+
+
+
+@media (max-width:1030px) {
+
+        /* footer */
+        .footer-box{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .email{
+            margin-bottom: 40px;
+        }
+
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+}
+
+
+@media (max-width:768px) {
+    /* Menu改成漢堡選單*/
+    .header{
+        position:relative;
+    }
+
+    .menu{
+        display: none;
+        z-index: 5;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        margin:0;
+        padding-top:40px;
+        padding-bottom: 40px;
+        top: 100%;
+        right: 50%;
+        transform: translateX(50%);/*因為上面用的是right，所以這邊用的是正的50%，如果使用到left，就需要設為負的50%*/
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+    
+    .menu-button{
+        display: block;
+    }
+
+    .menu-button .menu-buttom-close{
+        display: none;
+    }
+
+    .active{
+        display: flex;
+    }
+}
+
+@media (max-width:431px) {
+    
+}
