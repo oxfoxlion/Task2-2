@@ -179,80 +179,12 @@ body{
     display: none;
 }
 
-/* Blogger頁面從這裡開始 */
-
-/* title*/
-.blogger-title h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 120px;
-    margin-bottom: 24px;
-}
-
-.title-content{
-    text-align: center;
-    font-size:32px;
-    line-height: 38.4px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    padding-left: 16px;
-    padding-right: 16px;
-    color: #3B3B3B;
-    position: relative;
-    background: #FFFFFF; /*為了把線蓋住*/
-}
-
-
-/* title-線 */
-.blogger-title h2::before {
-    content:" ";
-    position: absolute;
-    background-color: #C1C1C1;
-    width: 372px;
-    height: 1px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-.title-content::before{
-    content: " ";
-    position: absolute;
-    background-color: #C1C1C1;
-    width: 6px;
-    height: 6px;
-    border-radius: 100%;
-    top: 50%;
-    right:-120px;
-    transform:translate(-50%,-50%);
-    z-index: 0;
-}
-
-.title-content::after{
-    content: " ";
-    position: absolute;
-    background-color: #C1C1C1;
-    width: 6px;
-    height: 6px;
-    border-radius: 100%;
-    top: 50%;
-    left:-115px;
-    transform:translate(-50%,-50%);
-    z-index: 0;
-}
-
-.blogger-title p{
-    color:#919191;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    margin-bottom: 80px;
-}
 
 /* articles */
+
+.blogger{
+    margin-top: 120px;
+}
 
 .blogger-content{
     display: flex;
@@ -302,93 +234,166 @@ body{
 }
 
 
+/* 正文開始 */
+
 .articles{
+    width: 75%;
+}
+.articles-title{
+    width: 100%;
     display: flex;
+    gap:40px;
     flex-direction: column;
-    gap: 64px;
-    align-items: flex-start;
-    width: 74%;
+    margin-bottom: 64px;
 }
 
-.articles-card{
+.articles-title-tag{
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    color:#919191;
+}
+
+.articles-title-tag a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    color:#919191;
+}
+
+.articles-title-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    align-items: center;
+}
+
+.articles-title-item h1{
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #3B3B3B;
+    font-weight: 700;
+}
+
+.articles-title-item h2{
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #3B3B3B;
+}
+
+.articles-content p{
+    color:#3B3B3B;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.articles-content h3{
+    color:#3B3B3B;
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.articles-content h5{
+    color: #3B3B3B;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.picture{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    margin-bottom: 40px;
+}
+
+.group{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.picture-box h4{
+    font-size: 16px;
+    line-height: 24px;
+    color: #5B5B5B;
+    text-align: center;
+}
+
+.read-more{
+    margin:0 5%;
+    border-top:1px solid #C1C1C1 ;
+}
+
+.read-more h3{
+    color: #3B3B3B;
+    font-size: 28px;
+    line-height: 33.6px;
+    font-weight: 700;
+    margin-top: 80px ;
+    margin-bottom: 40px;
+}
+
+.read-more-contanier{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 120px;
+    justify-content: flex-start;
+}
+
+.read-more-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 416px;
+}
+
+.read-more-card-pic{
+    overflow: hidden;
+}
+
+.read-more-card-pic img{
+    width:100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #F1F1F1;
+}
+
+.read-more-card-title{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #3B3B3B;
+    text-decoration: none;
+}
+
+.read-more-card-link{
     display: flex;
     justify-content: space-between;
 }
 
-.articles-card-items{
-    width: 65%;
-}
-
-.articles-card-img {
-    width: 33%;
-    display: block;
-    
-}
-
-.articles-card-img img{
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #F1F1F1;
-    overflow:hidden;
-}
-
-.articles-card-items-link{
-    margin-bottom: 16px;
-    display: flex;
-    gap:16px;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .tag{
     display: block;
+    padding:4px 12px;
     background-color: #F1F1F1;
+    border-radius: 16px;
     color:#3B3B3B;
+    text-decoration: none;
     font-size: 16px;
     line-height: 24px;
-    padding: 4px 12px;
-    border-radius: 16px;
-    text-decoration: none;
-}
-
-.tag:hover{
-    background-color:#3B3B3B;
-    color: #F1F1F1;
 }
 
 .date{
-    color:#5B5B5B;
+    color: #5B5B5B;
     font-size: 16px;
     line-height: 24px;
-    text-decoration:none ;
-}
-
-.date:hover{
-    color: #1E1E1E;
-}
-
-.articles-card-items a{
     text-decoration: none;
 }
 
-.articles-card-items h5{
-    color:#3B3B3B;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
 
-.articles-card-items p{
-    font-size: 16px;
-    line-height: 24px;
-    color: #3B3B3B;
-}
-
-
-/* Blogger頁面在這裡結束 */
 /* footer */
 .footer{
     background-image: url(./images/footer-bg-lg.png);
@@ -472,12 +477,13 @@ body{
     display: none;
 }
 
-/* 空頁面 */
-.empty{
-    height:600px;
-}
+
 
 @media (max-width:1350px) {
+
+    .blogger{
+        margin-top: 0px;
+    }
 
     .blogger-content{
         flex-direction: column;
@@ -497,8 +503,8 @@ body{
 
     .articles{
         width: 100%;
-        gap: 40px;
     }
+    
 }
 
 
@@ -562,32 +568,25 @@ body{
         display: flex;
     }
 
-    /* articles */
-
-    
-    .articles-card{
+    .read-more{
+        display:flex;
         flex-direction: column;
-        gap: 16px;
+        align-items: center;
     }
-    
-    .articles-card-items{
-        width:100%;
+
+    .read-more-contanier{
+        flex-wrap: wrap;
+        align-items: center;
     }
-    
-    .articles-card-img {
+
+    .read-more-card{
         width: 100%;
     }
 
-    .articles-card-items-link{
-        gap:0;
-        justify-content:space-between;
+    .group{
+        flex-wrap: wrap;
     }
     
-    
-    .articles-card-items p{
-        height: 72px;
-        overflow: hidden;
-    }
 }
 
 @media (max-width:696px) {
