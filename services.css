@@ -179,20 +179,347 @@ body{
     display: none;
 }
 
-/* 作品集頁面從這裡開始 */
+/* services頁面從這裡開始 */
+
+/* title */
+
+.title{
+    display: flex;
+    justify-self: center;
+    align-items:center;
+    gap: 16px;
+    font-size: 32px;
+    line-height: 38.4px;
+    letter-spacing: 12%;
+    color:#3B3B3B;
+    font-weight: 600;
+}
+
+.title-content-left,.title-content-right{
+    width: 100px;
+    height: 1px;
+    background-color: #C1C1C1;
+    position: relative;
+}
+
+.title-content-left::after{
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #C1C1C1;
+    border-radius: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+}
+
+.title-content-right::after{
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #C1C1C1;
+    border-radius: 100%;
+    top: 50%;
+    right: 0;
+    transform: translate(50%,-50%);
+}
+
+/* services */
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.services-items{
+    display: flex;
+    justify-content: center;
+    gap:24px;
+    flex-wrap: wrap;
+}
+
+.services-items div{
+    background-image: url(./images/service-item-bg.png);
+    width: 306px;
+    height: 306px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:24px;
+}
+
+.services-items div img{
+    width: 80px;
+    height: 80px;
+}
+
+.services-items div p{
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* process */
+
+.process{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: linear-gradient(-45deg,#000000 50%, #1E1E1E 50%);
+}
+
+.process .title{
+    color: #FFFFFF;
+}
+
+.process-content{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    align-items: center;
+    width: 655px;
+}
+
+.process-content-card{
+    width: 100%;
+    padding: 24px 32px;
+    background-color: #3B3B3B;
+    border: 1px solid #919191;
+    border-radius: 4px;
+    display: flex;
+    gap: 32px;
+}
+
+.process-content-card div h6{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33.6px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.process-content-card div p{
+    font-size: 20px;
+    line-height: 30px;
+    color: #E9E9E9;
+}
+
+.material-icons{
+    color: #5B5B5B;
+    font-size: 32px;
+}
+
+.process-content-card h5{
+    font-size: 72px;
+    line-height: 86.4px;
+    color: #919191;
+    font-family: "Tourney", sans-serif;;
+}
+
+/* prices */
+.prices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.prices-box{
+    display: flex;
+    gap:24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.prices-box-card{
+    background-color: #FAFAFA;
+    width: 416px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.prices-box-title{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.prices-box-title img{
+    width: 42px;
+    height: 42px;
+}
+
+.prices-box-title p{
+    font-size: 28px;
+    line-height: 42px;
+    color: #5B5B5B;
+    font-weight: 700;
+}
+
+.prices-box-deco{
+    width: 41px;
+    height: 1px;
+    background-color: #C1C1C1;
+}
+
+.prices-box-money{
+    display: flex;
+    gap:8px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.prices-box-money h6{
+    font-size: 32px;
+    line-height: 48px;
+    color: #1E1E1E;
+    font-weight: 700;
+}
+
+.prices-box-money p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #5B5B5B;
+}
+
+
+
+/* cases */
+.cases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #FAFAFA;
+}
+
+.cases-content{
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.cases-content-group{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cases-content-group-card img{
+    width: 636px;
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.cases-content-group-card h5{
+    color: #3B3B3B;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    margin-bottom: 8px;
+}
+
+.cases-content-group-card p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #919191;
+    margin-bottom: 24px;
+}
+
+.cases-content-group-card-tag{
+    display: flex;
+    gap: 16px;
+}
+
+.cases-content-group-card-tag a{
+    padding: 4px 12px;
+    border-radius: 16px;
+    background-color: #F1F1F1;
+    color:#3B3B3B;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    text-decoration: none;
+}
+
+/* questions */
+.questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.questions-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.questions-box-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:24px;
+}
+
+.questions-box-card{
+    border-radius: 8px;
+    border: 1px solid #E9E9E9;
+    padding: 24px;
+    width: 526px;
+    height: 141px;
+}
+
+.questions-box-card h5{
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+    color: #3B3B3B;
+    margin-bottom: 16px;
+}
+
+.questions-box-card p{
+    font-size: 20px;
+    line-height: 30px;
+    color: #3B3B3B;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-/* 作品集頁面在這裡結束 */
+/* services頁面在這裡結束 */
 /* footer */
 .footer{
     background-image: url(./images/footer-bg-lg.png);
@@ -335,8 +662,106 @@ body{
     .active{
         display: flex;
     }
+
+    .cases-content-group{
+        flex-direction: column;
+    }
+
+    .process-content{
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        align-items: center;
+        width: 430px;
+    }
+
+    .process-content-card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-content-card div{
+        text-align: center;
+    }
+
+    .questions-box-card{
+        width: 90%;
+        height: auto;
+    }
+
 }
 
-@media (max-width:431px) {
+@media (max-width:450px) {
+    .process-content{
+        width: 351px;
+    }
+
+    .title-content-left,.title-content-right{
+        width: 40px;
+        height: 1px;
+        background-color: #C1C1C1;
+        position: relative;
+    }
+
+    .prices-box{
+        gap:24px;
+    }
+
+    .prices-box-card{
+        width: 90%;
+    }
     
+    .prices-box-title img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .prices-box-title p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .prices-box-deco{
+        width: 28px;
+    }
+    
+    .prices-box-money h6{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .prices-box-money p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cases-content-group-card h5{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .cases-content-group-card-tag{
+        gap: 8px;
+    }
+
+    .questions-box-card h5{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .questions-box-card p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .process-content-card div h6{
+        font-size: 24px;
+        line-height: 28.8px;
+
+    }
+    
+    .process-content-card h5{
+        font-size: 48px;
+        line-height: 57.6px;
+    }
 }
