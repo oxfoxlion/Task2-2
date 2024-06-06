@@ -58,6 +58,12 @@ img{
     height:auto;
     }
 
+/* 拯救我的漢堡顏色 */
+:root {
+	--swiper-theme-color:#000000;
+}
+	
+
 /* 從這裡開始寫 */
 
 body{
